@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3963FD9B24C8B18600AC1E17 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3963FD9A24C8B18600AC1E17 /* InstructionsView.swift */; };
 		39DE09F024C61DA3001C4779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE09EF24C61DA3001C4779 /* AppDelegate.swift */; };
 		39DE09F224C61DA3001C4779 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE09F124C61DA3001C4779 /* SceneDelegate.swift */; };
 		39DE09F424C61DA3001C4779 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DE09F324C61DA3001C4779 /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3963FD9A24C8B18600AC1E17 /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
 		39DE09EC24C61DA3001C4779 /* colorGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = colorGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39DE09EF24C61DA3001C4779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39DE09F124C61DA3001C4779 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				39DE09EF24C61DA3001C4779 /* AppDelegate.swift */,
 				39DE09F124C61DA3001C4779 /* SceneDelegate.swift */,
 				39DE09F324C61DA3001C4779 /* ContentView.swift */,
+				3963FD9A24C8B18600AC1E17 /* InstructionsView.swift */,
 				39DE09F524C61DAF001C4779 /* Assets.xcassets */,
 				39DE09FA24C61DAF001C4779 /* LaunchScreen.storyboard */,
 				39DE09FD24C61DAF001C4779 /* Info.plist */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39DE09F024C61DA3001C4779 /* AppDelegate.swift in Sources */,
+				3963FD9B24C8B18600AC1E17 /* InstructionsView.swift in Sources */,
 				39DE09F224C61DA3001C4779 /* SceneDelegate.swift in Sources */,
 				39DE09F424C61DA3001C4779 /* ContentView.swift in Sources */,
 			);
