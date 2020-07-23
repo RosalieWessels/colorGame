@@ -7,6 +7,8 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseFirestore
 
 struct ContentView: View {
     @State var score = 0
@@ -18,6 +20,10 @@ struct ContentView: View {
     @State var listOfColors = ["red", "green", "blue", "black", "orange", "yellow", "purple", "pink"]
     
     @State var buttonDisabled = false
+    
+    @State var player = "Alice"
+    
+    var db = Firestore.firestore()
     
     var body: some View {
         NavigationView {
@@ -189,6 +195,45 @@ struct ContentView: View {
         } else {
             text = "Start Over"
             buttonDisabled = true
+            self.checkScoreAndUpload()
+            
+        }
+    }
+    
+    func checkScoreAndUpload() {
+        
+        //get the score from Firebase
+        let docRef = db.collection("leaderboard").document(player)
+        
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                if var highScore = document.get("score") as? Int {
+                    print("userhighscore", highScore)
+                    if self.score > highScore {
+                        //new highscore, upload to firebase
+                        self.uploadScore()
+                    }
+                    
+                }
+            } else {
+                print("Document does not exist")
+                self.uploadScore()
+            }
+        }
+    }
+    
+    func uploadScore() {
+        //uploads score to Firebase
+        db.collection("leaderboard").document(player).setData([
+            "name" : player,
+            "score" : score
+        ]) { err in
+            if let err = err {
+                print("Error writing the document")
+                print(err)
+            } else {
+                print("Document successfully written! It worked!")
+            }
         }
     }
     
