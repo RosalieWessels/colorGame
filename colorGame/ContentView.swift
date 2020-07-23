@@ -29,6 +29,13 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 HStack {
+                    NavigationLink (destination: leaderboardView()){
+                        Text("Leaderboard").font(.system(size: 20, weight: .bold, design: .rounded))
+                        Image(systemName: "text.bubble").font(.system(size: 20))
+                    }.foregroundColor(.white)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(20)
                     NavigationLink (destination: InstructionsView()){
                         Text("Instructions").font(.system(size: 20, weight: .bold, design: .rounded))
                         Image(systemName: "info.circle").font(.system(size: 20))
